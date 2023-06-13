@@ -77,6 +77,7 @@ local plugins = {
         "gofumpt",
         "goimports-reviser",
         "golines",
+        "golangci-lint",
       }
     }
   },
