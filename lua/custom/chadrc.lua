@@ -1,11 +1,13 @@
 ---@type ChadrcConfig 
 local M = {}
-M.ui = {theme = 'catppuccin'}
-M.plugins = 'custom.plugins'
-M.mappings = require "custom.mappings"
 
-vim.keymap.set("n", "<leader>i", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
+-- Set theme
+M.ui = {theme = 'catppuccin'}
+
+-- Add plugins
+M.plugins = 'custom.plugins'
+
+-- Add mappings
+M.mappings = require "custom.mappings"
 
 return M

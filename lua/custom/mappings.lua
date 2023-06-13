@@ -1,5 +1,6 @@
 local M = {}
 
+-- Load dap specific mappings
 M.dap = {
   plugin = true,
   n = {
@@ -30,6 +31,7 @@ M.dap = {
   }
 }
 
+-- Load dap-go specific mappings
 M.dap_go = {
   plugin = true,
   n = {
@@ -48,6 +50,7 @@ M.dap_go = {
   }
 }
 
+-- Load dap-ui specific mappings
 M.dap_ui = {
   plugin = true,
   n = {
@@ -58,5 +61,9 @@ M.dap_ui = {
     },
   }
 }
+
+vim.keymap.set("n", "<leader>i", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
 
 return M
