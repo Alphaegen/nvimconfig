@@ -1,5 +1,33 @@
 local plugins = {
   {
+    "ThePrimeagen/vim-be-good",
+    lazy = false,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "bash",
+
+        "go",
+        "rust",
+        "markdown",
+
+        "gomod",
+        "gosum",
+        "gitignore",
+
+        "json",
+        "yaml",
+        "regex",
+
+        "dockerfile",
+      }
+    }
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
@@ -45,15 +73,16 @@ local plugins = {
     opts = {
       ensure_installed = {
         "gopls",
+        "bash-language-server",
+        "gofumpt",
+        "goimports-reviser",
+        "golines",
       }
     }
   },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    ops = {
-
-    }
   },
 }
 return plugins

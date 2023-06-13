@@ -62,8 +62,10 @@ M.dap_ui = {
   }
 }
 
-vim.keymap.set("n", "<leader>i", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
+M.custom = {
+  n = {
+    ["<leader>i"] = {"<cmd>TroubleToggle<cr>", opts = { silent = true, noremap = true}}
+  }
+}
 
 return M
