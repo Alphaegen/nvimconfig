@@ -20,12 +20,12 @@ M.dap = {
     },
     ["<F2>"] = {
       function()
-        require("dap").step_out()
+        require("dap").step_over()
       end
     },
     ["<F3>"] = {
       function()
-        require("dap").step_over()
+        require("dap").step_out()
       end
     },
   }
