@@ -11,22 +11,32 @@ M.dap = {
     ["<leader>dc"] = {
       function()
         require("dap").continue()
-      end
+      end,
+      "Continue or start debugging"
+    },
+    ["<leader>dt"] = {
+      function()
+        require("dap").terminate()
+      end,
+      "Terminate the debug session"
     },
     ["<F1>"] = {
       function()
         require("dap").step_into()
-      end
+      end,
+      "Step into"
     },
     ["<F2>"] = {
       function()
         require("dap").step_over()
-      end
+      end,
+      "Step over"
     },
     ["<F3>"] = {
       function()
         require("dap").step_out()
-      end
+      end,
+      "Step out"
     },
   }
 }
@@ -57,14 +67,19 @@ M.dap_ui = {
     ["<leader>dui"] = {
       function()
         require("dapui").toggle()
-      end
+      end,
+      "Toggle debugging ui"
     },
   }
 }
 
 M.custom = {
   n = {
-    ["<leader>i"] = {"<cmd>TroubleToggle<cr>", opts = { silent = true, noremap = true}}
+    ["<leader>i"] = {
+      "<cmd>TroubleToggle<cr>",
+      "Toggle issues" ,
+      opts = { silent = true, noremap = true}
+    },
   }
 }
 

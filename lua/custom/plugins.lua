@@ -4,6 +4,10 @@ local plugins = {
     lazy = false,
   },
   {
+    "iamcco/markdown-preview.nvim",
+    lazy = false,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -61,7 +65,7 @@ local plugins = {
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
     opts = function()
-      return require("custom.configs.dap")
+      return require("custom.configs.dap-config")
     end,
     init = function()
       require("dapui").setup()
